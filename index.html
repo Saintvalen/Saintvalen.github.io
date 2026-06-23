@@ -55,8 +55,8 @@ function obtenerCodigoDesdeURL() {
 
 const codigoGorra = obtenerCodigoDesdeURL();
 
-const SUPABASE_URL = "https://fbecjsryzhkeekgozzrd.supabase.co/rest/v1";
-const SUPABASE_KEY = "sb_publishable_KZUL2GKpO2bA5rDdZ36pXQ_hHZTflvs";
+const SUPABASE_URL = "https://byqzklitudtnmktlliom.supabase.co/rest/v1";
+const SUPABASE_KEY = "sb_publishable_FBAToUGaAYLQxxEuF8yg9A_L2wKePDn";
 
 
 async function actualizarContador() {
@@ -68,8 +68,8 @@ async function actualizarContador() {
 
     try {
 
-        const respuesta = await fetch(
-            `${SUPABASE_URL}/LINKS_DE_VERIFICACION?IDGORRA=eq.${codigoGorra}&select=*`,
+       const respuesta = await fetch(
+    `${SUPABASE_URL}/VERIFICACION_SAINT?IDPLAYERAS=eq.${codigoGorra}&select=*`,
             {
                 headers: {
                     "apikey": SUPABASE_KEY,
@@ -102,8 +102,8 @@ async function actualizarContador() {
         contadorActual++;
 
 
-        const actualizar = await fetch(
-            `${SUPABASE_URL}/LINKS_DE_VERIFICACION?IDGORRA=eq.${codigoGorra}`,
+       const actualizar = await fetch(
+    `${SUPABASE_URL}/VERIFICACION_SAINT?IDPLAYERAS=eq.${codigoGorra}`,
             {
                 method: "PATCH",
 
